@@ -1,3 +1,48 @@
 body {
   font-family: sans-serif;
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin: 30px auto;
+}
+
+.todo-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border: solid 3px black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.todo-row p, .todo-row h3 {
+  width: 33%;
+  text-align: center;
+}
+
+.todo-button {
+  width: 20%;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.todo-button:hover{
+  background-color: red;
+  cursor: pointer;
+}
+
+.not-completed {
+  background-color: firebrick;
+}
+
+.completed {
+  background-color: green;
 }
