@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
   for (var i = 0; i < completedButtons.length; i++) {
     completedButtons[i].addEventListener('click', function(){
-      this.style.backgroundColor = "green";
+      this.classList.add("completed");
+      this.classList.remove("not-completed");
       this.innerText = "Completed";
-      console.log(this.parentNode.children[2].innerHTML);
       this.parentNode.children[2].innerHTML = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear();
     });
   }

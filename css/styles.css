@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .main-content {
@@ -34,7 +35,7 @@ body {
   font-weight: bold;
 }
 
-.todo-button:hover{
+.not-completed:hover{
   background-color: red;
   cursor: pointer;
 }
@@ -45,4 +46,31 @@ body {
 
 .completed {
   background-color: green;
+}
+
+.new-todo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: dodgerblue;
+  padding: 10px 5px;
+  border: solid 3px black;
+  border-radius: 5px;
+}
+
+
+.new-todo input {
+  border: solid 3px black;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.new-todo input[type="text"]{
+  width: 50%;
+}
+
+.new-todo input[type="submit"]{
+  background-color: red;
+  width: 25%;
 }
