@@ -35,7 +35,7 @@ body {
   font-weight: bold;
 }
 
-.not-completed:hover{
+.not-completed:hover, #newToDoForm input[type="submit"]:hover{
   background-color: red;
   cursor: pointer;
 }
@@ -71,6 +71,6 @@ body {
 }
 
 .new-todo input[type="submit"]{
-  background-color: red;
+  background-color: firebrick;
   width: 25%;
 }
