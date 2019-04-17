@@ -26,9 +26,9 @@ function createToDo(toDo){
   date.innerHTML = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear();
   row.appendChild(date);
   contentArea[0].insertBefore(row, contentArea[0].children[contentArea[0].children.length - 1]);
-  var lastToDo = contentArea[0].children[contentArea[0].children.length - 2];
+  var lastToDoButton = contentArea[0].children[contentArea[0].children.length - 2].children[1];
 
-  lastToDo.children[1].addEventListener('click', function(){
+  lastToDoButton.addEventListener('click', function(){
     this.classList.add("completed");
     this.classList.remove("not-completed");
     this.innerText = "Completed";
