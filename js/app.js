@@ -16,11 +16,7 @@ function createToDo(toDo){
   title.innerHTML = toDo;
   title.classList.add("todo-title");
   row.appendChild(title);
-  var button = document.createElement("button");
-  button.classList.add("todo-button");
-  button.classList.add("not-completed");
-  button.innerText = "Not Completed";
-  row.appendChild(button);
+  row.appendChild(createButton(["todo-button", "not-completed"], "Not Completed"));
   var date = document.createElement('p');
   date.classList.add('todo-date');
   date.innerHTML = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear();
@@ -41,4 +37,13 @@ function createToDo(toDo){
 
 function countTodo(){
   document.getElementById('remaining-tasks').innerHTML = document.getElementsByClassName('not-completed').length;
+}
+
+function createButton(classArr, buttonText){
+  var button = document.createElement("button");
+  for(var i=0; i < classArr.length ; i++){
+    button.classList.add(classArr[i]);
+  }
+  button.innerText = buttonText;
+  return button;
 }
